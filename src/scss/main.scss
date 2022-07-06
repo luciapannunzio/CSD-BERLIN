@@ -1,0 +1,10 @@
+@import "./variables/var";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  font-family: $font-family-base;
+}
