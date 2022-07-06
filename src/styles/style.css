@@ -41,7 +41,9 @@ main {
   align-items: center;
 }
 
-.first-container, .second-container, .third-container {
+.first-container, 
+.second-container, 
+.third-container {
   margin: 20px;
   padding: 20px;
   display: flex;
@@ -52,7 +54,6 @@ main {
 a {
   color: whitesmoke;
 }
-
 
 #logo {
   width: 10vw;
