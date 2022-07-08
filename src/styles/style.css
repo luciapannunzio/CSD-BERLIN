@@ -100,12 +100,6 @@ main a {
   color: whitesmoke;
 }
 
-footer img {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin-bottom: -300px;
-}
 footer ul {
   font-weight: bolder;
   display: flex;
