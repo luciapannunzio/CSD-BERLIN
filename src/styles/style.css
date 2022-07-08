@@ -2,10 +2,15 @@
   font-family: "Gordita";
   src: url(../fonts/Gordita_font/Type\ Atelier\ -\ Gordita.otf);
 }
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Gordita";
   background-color: #1b39ca;
-  color: white;
+  color: #fff;
 }
 
 header {
@@ -17,9 +22,13 @@ header {
   position: fixed;
   background-color: #1b39ca;
 }
-
-nav {
-  margin-bottom: 25px;
+header nav {
+  font-size: 28px;
+}
+header #logo {
+  width: 10vw;
+  height: 15vh;
+  margin-left: 30px;
 }
 
 main {
@@ -27,40 +36,83 @@ main {
   flex-direction: column;
   padding-top: 25vh;
 }
-
-.welcome-message {
+main .welcome-message {
+  font-size: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.image-heart {
+main .image-heart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+}
+main .image-heart #heart {
+  width: 50%;
+}
+main .image-heart h2 {
+  margin: 40px;
+}
+main .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26px;
+}
+main .first-container div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.first-container,
-.second-container,
-.third-container {
+main .first-container div p {
+  margin: 40px 130px 40px 130px;
+}
+main .first-container div h4 {
+  margin: 40px;
+}
+main .second-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .second-container div h2 {
+  margin: 40px;
+}
+main .second-container div p {
+  margin: 40px 130px 40px 130px;
+}
+main .third-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .third-container div h2 {
+  margin: 40px;
+}
+main .third-container div p {
+  margin: 40px 130px 40px 130px;
+}
+main .third-container div h4 {
   margin: 20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-
-a {
+main a {
   color: whitesmoke;
 }
 
-#logo {
-  width: 10vw;
-  height: 15vh;
+footer img {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-bottom: -300px;
 }
-
-#heart {
-  width: 50%;
+footer ul {
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
