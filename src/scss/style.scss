@@ -76,6 +76,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .student-laptop {
+     width: 100%;
+    }
     h2 {
       margin: 40px;
     }
@@ -87,6 +90,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .people {
+      width: 100%;
+     }
     h2 {
       margin: 40px;
     }
@@ -98,24 +104,25 @@ main {
     }
   }
   a {
-    color: $image-text-color;
+    color: black;
+  }
+
+  .creators {
+    h3 {
+      margin: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    ul {
+      font-weight: bolder;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      margin: 10px;
+    }
   }
 }
 
 // Footer
-footer {
-  // img {
-  //   position: fixed;
-  //   right: 0;
-  //   bottom: 0;
-  //   margin-bottom: -300px;
-  // }
-  ul {
-    font-weight: bolder;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    margin: 10px;
-  }
-}

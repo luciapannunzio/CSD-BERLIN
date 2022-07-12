@@ -76,6 +76,9 @@ main .second-container div {
   flex-direction: column;
   align-items: center;
 }
+main .second-container div .student-laptop {
+  width: 100%;
+}
 main .second-container div h2 {
   margin: 40px;
 }
@@ -87,6 +90,9 @@ main .third-container div {
   flex-direction: column;
   align-items: center;
 }
+main .third-container div .people {
+  width: 100%;
+}
 main .third-container div h2 {
   margin: 40px;
 }
@@ -97,10 +103,15 @@ main .third-container div h4 {
   margin: 20px;
 }
 main a {
-  color: whitesmoke;
+  color: black;
 }
-
-footer ul {
+main .creators h3 {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .creators ul {
   font-weight: bolder;
   display: flex;
   justify-content: space-between;
