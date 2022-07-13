@@ -14,12 +14,46 @@ body {
   
 }
 
+<<<<<<< HEAD
 .Grid-container{
 
   @media screen and(min-width:768px){
     display:grid;
     grid-template-columns: repeat(8,1fr);
     gap:1.5rem;  
+=======
+// Header
+header {
+  height: 12vh;
+  width: 95vw;
+  position: fixed;
+  background-color: $background-color;
+  .logo {
+    width: 6vw;
+    height: 6vh;
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  nav {
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .pages-links {
+      width: 20rem;
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 18px;
+    }
+    .languages-buttons a {
+      color: $text-color;
+      text-decoration: none;
+    }
+    .languages-buttons a:hover {
+      color: $hover-color;
+      text-decoration: none;
+    }
+>>>>>>> 86768a0f1093ef9dfac013d10cf37c84d6c6ef2d
   }
 
   @media screen and(min-width:1024px){
@@ -132,10 +166,23 @@ body {
       top:5px;
       
     }
+<<<<<<< HEAD
 
     @media screen and(min-width:1024px){
       grid-column: 2/12;
       top:45px;
+=======
+  }
+  .second-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .student-laptop {
+     width: 100%;
+    }
+    h2 {
+      margin: 40px;
+>>>>>>> 86768a0f1093ef9dfac013d10cf37c84d6c6ef2d
     }
 
   
@@ -687,6 +734,7 @@ body {
   
     
   }
+<<<<<<< HEAD
   
   // Footer
   footer {
@@ -704,11 +752,50 @@ body {
       list-style: none;
       margin: 10px;
     }
+=======
+  .third-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .people {
+      width: 100%;
+     }
+    h2 {
+      margin: 40px;
+    }
+    p {
+      margin: 40px 130px 40px 130px;
+    }
+    h4 {
+      margin: 20px;
+    }
+  }
+  a {
+    color: black;
+  }
+  
+  .creators {
+    h3 {
+      margin: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    ul {
+      font-weight: bolder;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      margin: 10px;
+    }
+>>>>>>> 86768a0f1093ef9dfac013d10cf37c84d6c6ef2d
   }
 
 
 }
 
+<<<<<<< HEAD
 
 
 
@@ -1005,3 +1092,6 @@ body {
 //     margin: 10px;
 //   }
 // }
+=======
+// Footer
+>>>>>>> 86768a0f1093ef9dfac013d10cf37c84d6c6ef2d
