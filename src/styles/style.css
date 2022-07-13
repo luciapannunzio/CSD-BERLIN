@@ -396,7 +396,7 @@ body {
     font-size: 42px;
   }
   .Grid-container main .Inner-main .welcome-message img {
-    width: 100%;
+    width: 20%;
   }
   .Grid-container main .Inner-main .content {
     width: 100%;
@@ -422,11 +422,11 @@ body {
     margin-top: 2rem;
   }
   .Grid-container main .Inner-main .content .container div .boy, .Grid-container main .Inner-main .content .container div .women {
-    width: 40%;
+    width: 30%;
     margin-top: 3rem;
   }
   .Grid-container main .Inner-main .content .container div .heart {
-    width: 70%;
+    width: 50%;
     margin: 4rem 0;
   }
   .Grid-container main .Inner-main .content .container div .boy {
