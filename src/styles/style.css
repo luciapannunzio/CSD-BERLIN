@@ -37,6 +37,14 @@ header nav .pages-links {
   justify-content: space-evenly;
   font-size: 18px;
 }
+header nav .languages-buttons a {
+  color: #fff;
+  text-decoration: none;
+}
+header nav .languages-buttons a:hover {
+  color: #FF6E18;
+  text-decoration: none;
+}
 
 main {
   display: flex;

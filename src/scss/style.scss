@@ -36,6 +36,14 @@ header {
       justify-content: space-evenly;
       font-size: 18px;
     }
+    .languages-buttons a {
+      color: $text-color;
+      text-decoration: none;
+    }
+    .languages-buttons a:hover {
+      color: $hover-color;
+      text-decoration: none;
+    }
   }
 }
 
@@ -113,7 +121,7 @@ main {
   a {
     color: black;
   }
-
+  
   .creators {
     h3 {
       margin: 15px;
