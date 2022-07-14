@@ -10,10 +10,12 @@
 body {
   font-family: "Gordita";
   background-color: #1b39ca;
-  color: #fff;
+  color: white;
 }
 
-<<<<<<< HEAD
+.Grid-container {
+  background-color: #1b39ca;
+}
 @media screen and (min-width: 768px) {
   .Grid-container {
     display: grid;
@@ -91,39 +93,6 @@ body {
     padding: 0.5rem;
     margin-top: 1rem;
   }
-=======
-header {
-  height: 12vh;
-  width: 95vw;
-  position: fixed;
-  background-color: #1b39ca;
-}
-header .logo {
-  width: 6vw;
-  height: 6vh;
-  margin-top: 10px;
-  margin-left: 30px;
-}
-header nav {
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header nav .pages-links {
-  width: 20rem;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 18px;
-}
-header nav .languages-buttons a {
-  color: #fff;
-  text-decoration: none;
-}
-header nav .languages-buttons a:hover {
-  color: #FF6E18;
-  text-decoration: none;
->>>>>>> 86768a0f1093ef9dfac013d10cf37c84d6c6ef2d
 }
 @media screen and (min-width: 1024px) {
   .Grid-container header {
@@ -134,6 +103,7 @@ header nav .languages-buttons a:hover {
   position: relative;
   top: 100px;
   width: 100%;
+  background-color: #1b39ca;
 }
 @media screen and (min-width: 768px) {
   .Grid-container main {
@@ -152,7 +122,7 @@ header nav .languages-buttons a:hover {
 }
 .Grid-container main .Inner-main .welcome-message {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -160,14 +130,17 @@ header nav .languages-buttons a:hover {
 }
 .Grid-container main .Inner-main .welcome-message .hero-text {
   width: 100%;
-  height: 250px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .Grid-container main .Inner-main .welcome-message .hero-text h1 {
-  font-size: 34px;
+  font-size: 50px;
+}
+.Grid-container main .Inner-main .welcome-message .hero-text .dynamic {
+  height: 50px;
 }
 .Grid-container main .Inner-main .welcome-message img {
   width: 100%;
@@ -205,7 +178,6 @@ header nav .languages-buttons a:hover {
   justify-content: center;
   padding: 1rem;
 }
-<<<<<<< HEAD
 .Grid-container main .Inner-main .content .container div .girl, .Grid-container main .Inner-main .content .container div .students {
   width: 80%;
   margin-top: 2rem;
@@ -214,12 +186,16 @@ header nav .languages-buttons a:hover {
   width: 50%;
   margin-top: 3rem;
 }
+.Grid-container main .Inner-main .content .container div h1 {
+  font-size: 40px;
+}
 .Grid-container main .Inner-main .content .container div h2 {
   font-size: 28px;
 }
 .Grid-container main .Inner-main .content .container div h3 {
   text-align: center;
   font-size: 18px;
+  margin-bottom: 1rem;
 }
 .Grid-container main .Inner-main .content .container div h4 {
   font-size: 18px;
@@ -246,13 +222,6 @@ header nav .languages-buttons a:hover {
 .Grid-container main .Inner-main .content .container div ul li {
   font-size: 0.8rem;
   margin: 1rem 0;
-=======
-main .second-container div .student-laptop {
-  width: 100%;
-}
-main .second-container div h2 {
-  margin: 40px;
->>>>>>> 86768a0f1093ef9dfac013d10cf37c84d6c6ef2d
 }
 .Grid-container main .Inner-main .Ukrain-love {
   display: flex;
@@ -270,16 +239,8 @@ main .second-container div h2 {
   align-items: center;
   margin: 5rem 0;
 }
-<<<<<<< HEAD
 .Grid-container main .Inner-main .creators h3 {
   font-size: 1.5rem;
-=======
-main .third-container div .people {
-  width: 100%;
-}
-main .third-container div h2 {
-  margin: 40px;
->>>>>>> 86768a0f1093ef9dfac013d10cf37c84d6c6ef2d
 }
 .Grid-container main .Inner-main .creators div {
   width: 100%;
@@ -292,7 +253,6 @@ main .third-container div h2 {
 .Grid-container main .Inner-main .creators div .unicorn {
   width: 50%;
 }
-<<<<<<< HEAD
 .Grid-container main .Inner-main .creators div ul {
   list-style: none;
 }
@@ -558,18 +518,6 @@ main .third-container div h2 {
   }
 }
 .Grid-container footer ul {
-=======
-main a {
-  color: black;
-}
-main .creators h3 {
-  margin: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .creators ul {
->>>>>>> 86768a0f1093ef9dfac013d10cf37c84d6c6ef2d
   font-weight: bolder;
   display: flex;
   justify-content: space-between;

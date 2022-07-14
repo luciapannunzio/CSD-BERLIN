@@ -6,8 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>csd-berlin</title>
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/pushin/dist/pushin.min.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/pushin/dist/umd/pushin.min.js"
+    ></script>
+        
   </head>
   <body>
+
+    <!-- <div class="pushin">
+      <div class="pushin-scene">
+        <div 
+        class="pushin-layer" 
+        
+        data-pushin-to="1500"
+        data-pushin-speed="25" 
+        >
+        <img src="./images/circle-rainbow.svg"></div>
+      </div>
+    </div> -->
+
+   
 
     <section class="Grid-container">
 
@@ -34,23 +54,25 @@
       <section class="welcome-message">
         <div class="hero-text">
           <h1>Don't hate </h1>
-          <h1>&lt; create &gt;</h1>
-          <h1>&lt; diversity &gt;</h1>
+          <div class="dynamic">
+            <h1 class="type-animation" data-period="2000" data-type='["&lt create &gt", "&lt diversity &gt"]'><span class="wrap"></span></h1>
+          </ul>
+          </div>
         </div>
        
         <img src="./images/LapTop.png">
         
       </section>
-
+ 
       <!--this one is style but lets see if they like the yellow heart better-->
-      <!-- <section class="image-heart">
+      <section class="image-heart">
         <img id="heart" src="./images/heart-red.svg" />
-      </section> -->
+      </section> 
       <section class="content">
         <section class="container">
           <div>
             <h1>United in Love </h1>
-            <img  class="heart" src="./images/DCI_CSD_motives_Heart.svg">
+            <!-- <img  class="heart" src="./images/DCI_CSD_motives_Heart.svg"> -->
             <h3>against hate, war and discrimination</h3>
             <h4>At DCI everyone is welcome</h4>
             <p>
@@ -104,7 +126,7 @@
         <!-- --------------------------------------------------------------- -->
         <section class="container">
           <div>
-            <img id="student-laptop" src="./images/them.png" />
+            <!-- <img id="student-laptop" src="./images/them.png" /> -->
             <h2>Courses</h2>
             <img id="people" class="girl" src="./images/DCI_illustrations+elements_05.png" />
             <h3>Start your journey to your new future at DCI</h3>
@@ -217,7 +239,77 @@
     </footer>
   </section>
 
-    <script></script>
+    <script>
+
+
+//INITIAL ANIMATION
+
+pushInStart({debug:true})
+
+
+// TYPEWRITER ANIMATION
+      // this is not my code : OPEN SOURCE 
+      let TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        let i = this.loopNum % this.toRotate.length;
+        let fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        let that = this;
+        let delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        let elements = document.getElementsByClassName('type-animation');
+        for (let i=0; i<elements.length; i++) {
+            let toRotate = elements[i].getAttribute('data-type');
+            let period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        let css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+
+
+
+
+    </script>
   </body>
 </html>
 
