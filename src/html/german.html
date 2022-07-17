@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>csd-berlin</title>
-    <link rel="stylesheet" href="../styles/style.css" />
-  </head>
-  <body>
-    <!-- nav -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>csd-berlin</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/pushin/dist/pushin.min.css" />
+  <script type="text/javascript" src="https://unpkg.com/pushin/dist/umd/pushin.min.js"></script>
+
+</head>
+
+<body>
+
+  <section class="Grid-container">
+
     <header>
-      <nav>
-        <div class="logo">
-          <img src="../images/logo.svg" />
-        </div>
-        <div class="pages-links"><a>Courses</a> <a>Careers</a></div>
+      <section class="Header-inner">
+        <img class="logo" src="../images/logo.svg" />
         <div class="languages-buttons">
-          <a href="#">DE</a><span> |</span>
-          <a href="../index.html">EN</a>
-      </div>
+          <a href="../index.html">EN</a><span> |</span>
+          <a href="#">DE</a>
+        </div>
+      </section>
+
+      <nav class="nav-bar">
+        <a>KURSE</a>
+        <a>KARRIERE</a>
+      </nav>
+
+
     </header>
 
-    <!-- main -->
+
     <main>
-      <section class="welcome-message">
-        <h1>
-          Don't hate <br />
-          &lt; create &gt; <br />
-          &lt; diversity &gt;
-        </h1>
-      </section>
+      <section class="Inner-main">
+        <section class="welcome-message">
+          <div class="hero-text">
+            <h1>Don't hate </h1>
+            <div class="dynamic">
+              <h1 class="type-animation" data-period="2000" data-type='["&lt create &gt", "&lt diversity &gt"]'><span
+                  class="wrap"></span></h1>
+              </ul>
+            </div>
+          </div>
 
-      <section class="image-heart">
-        <img id="heart" src="../images/heart-red.svg" />
-        <h2>My body my choice</h2>
-      </section>
+          <img src="../images/LapTop.png">
 
-      <section class="content">
-        <section class="first-container">
-          <div>
-            <h3>United in Love - against hate, war and discrimination</h3>
-            <h4>Beim DCI ist jeder herzlich willkommen</h4>
-            <p>
-              Seit unserer Gründung im Jahr 2016 haben wir eine Mission: Wir
+        </section>
+
+        <!--this one is style but lets see if they like the yellow heart better-->
+        <section class="image-heart">
+          <img id="heart" src="../images/heart-red.svg" />
+        </section>
+        <section class="content">
+          <section class="container">
+            <div>
+              <h1>United in Love </h1>
+              <!-- <img  class="heart" src="./images/DCI_CSD_motives_Heart.svg"> -->
+              <h3>against hate, war and discrimination</h3>
+              <h4>Beim DCI ist jeder herzlich willkommen</h4>
+              <p>
+                Seit unserer Gründung im Jahr 2016 haben wir eine Mission: Wir
               möchten Menschen helfen, einen sicheren Job in Deutschland zu
               finden. Für uns ist es nicht wichtig, welchen Hintergrund Du hast,
               wie Du aussiehst oder wen Du liebst. Bei uns zählen Deine inneren
@@ -53,130 +73,233 @@
               Marketing, Programmierung und Personalmanagement. Es ist für jeden
               etwas dabei! Worauf wartest Du? Schau Dir unsere Kurse an und
               starte Deine Reise in eine neue Karriere.
-            </p><button><a
-                href="https://digitalcareerinstitute.org/courses/"
-                target="_blank">
+              </p>
+              <a href="https://digitalcareerinstitute.org/courses/" target="_blank">
                 Zu den Kursen</a>
-            </button>
 
-            <ul>
-              <li>100+ Kurse seit unserer Gründung.</li>
-              <li>
-                110+ verschiedene Nationalitäten unserer Student:innen und
-                Lehrer:innen.
-              </li>
-              <li>600+ Firmenpartner in Deutschland.</li>
-              <li>10 Standorte in ganz Deutschland.</li>
-              <li>>80% Vermittlungsquote.</li>
-            </ul>
-            <!-- <p>
-              Oder möchtest Du lieber direkt beim DCI arbeiten? Dann schau Dir
-              doch mal unsere Jobangebote an! Wir freuen uns darauf, von Dir zu
-              hören.
-              <button>
-                <a href="https://dci.jobs.personio.de/" target="_blank"
-                  >Mehr erfahren</a></button>
+              <ul>
+                <li>100+ Kurse seit unserer Gründung.</li>
+                <li>110+ verschiedene Nationalitäten unserer Student:innen und
+                  Lehrer:innen.</li>
+                <li>600+ Firmenpartner in Deutschland.</li>
+                <li>10 Standorte in ganz Deutschland.</li>
+                <li>80% Vermittlungsquote.</li>
+              </ul>
+              <!-- <p>
+              Or are you more interested in joining the DCI itself? Then take a
+              look at our job offers! We are looking forward to hearing from
+              you.  
+              <button> <a
+               href="https://dci.jobs.personio.de/"
+                target="_blank">
+                Learn more</a></button>
             </p> -->
-          </div>
+            </div>
+          </section>
+          <section class="Ukrain-love">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+          </section>
+
+          <!-- --------------------------------------------------------------- -->
+          <section class="container">
+            <div>
+              <!-- <img id="student-laptop" src="./images/them.png" /> -->
+              <h2>Kurse</h2>
+              <img id="people" class="girl" src="../images/DCI_illustrations+elements_05.png" />
+              <h3>Starte Deine Reise in eine neue Zukunft beim DCI</h3>
+              <h4>Kostenlose, zertifizierte Kurse für alle!</h4>
+              <p>
+                Ein Job in der digitalen Industrie ist langweilig und eintönig?
+                Falsch! Hier ist es bunt, vielfältig und absolut kreativ. Menschen
+                aus der ganzen Welt kommen zusammen, um neue Lösungen zu
+                entwickeln und zu testen. Die digitale Industrie ist ständig im
+                Wandel - mit neuen Positionen, Herausforderungen und mehr
+                Freiheiten als in anderen Branchen. Um wettbewerbsfähig zu
+                bleiben, müssen Unternehmen bei der Digitalisierung mitziehen und
+                sich ebenfalls verändern. Dafür brauchen sie Experten - und das
+                ist Deine Chance.
+              </p>
+              <ul>
+                <li>96.000 offene Stellen</li>
+                <li>Hohe Gehälter (auch als Anfänger:in)</li>
+                <li>Gute Work-Life-Balance</li>
+                <li>Sichere Arbeitsplätze</li>
+                <li>Zukunftsorientierte Branche</li>
+              </ul>
+              <br />
+              <br />
+              <img class="students" src="../images/DCI_illustrations+elements_09.png">
+              <h3>Starte jetzt Deinen Weg in eine neue Karriere!</h3>
+              <p>
+                Alle unsere Kurse sind von der Agentur für Arbeit zertifiziert und
+                werden regelmäßig auf ihre Qualität überprüft. Das bedeutet auch,
+                dass sie über einen Bildungsgutschein der Agentur für Arbeit oder
+                des Jobcenters finanziert werden. Sie übernehmen die Kosten und Du
+                musst später keinen Cent zurückzahlen. Möchtest Du mehr über die
+                Vorteile einer Weiterbildung beim DCI erfahren? Dann klicke auf
+                den Button.
+              </p>
+
+              <a href="https://digitalcareerinstitute.org/courses/" target="_blank">Weiter zu den Kursen</a>
+
+            </div>
+
+          </section>
+          <section class="Ukrain-love">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+          </section>
+          <!-- --------------------------------------------------------------- -->
+          <section class="container">
+            <div>
+
+              <h2>Karriere</h2>
+              <img id="people" class="women" src="../images/DCI_illustrations+elements_12.png" />
+              <h3>Werde jetzt ein Teil des DCI</h3>
+              <p>
+                In den letzten Jahren ist das DCI stetig gewachsen - und es geht
+                weiter! Um unsere Mission in die Tat umzusetzen, jedem zu helfen,
+                einen sicheren Arbeitsplatz in der digitalen Industrie zu
+                bekommen, suchen wir immer nach Leuten, die daran interessiert
+                sind, sich uns anzuschließen.
+              </p>
+              <h4>My body, my career, my choice</h4>
+              <p>
+                Für uns spielt es keine Rolle, woher Du kommst, wen Du liebst oder
+                welche Hautfarbe Du hast. Sei einfach Du selbst, wie auch immer Du
+                bist. Wir leben das Motto: “Mein Körper, meine Karriere, meine
+                Wahl!” Kannst Du Dich als Teil davon sehen? Möchtest Du gemeinsam
+                mit uns wachsen und als Vorbild unserer Student:innen der LGBTQ+
+                Szene vorangehen? Dann schau Dir doch mal an, welche Stellen
+                gerade offen sind:
+              </p>
+              <a href="https://dci.jobs.personio.de/" target="_blank">Unsere Stellenangebote</a>
+              <img class="boy" src="../images/DCI_illustrations+elements_20.png">
+            </div>
+          </section>
+          <section class="Ukrain-love">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+            <img class="heart" src="../images/DCI_CSD_motives_Heart.svg">
+          </section>
         </section>
-        <!-- --------------------------------------------------------------- -->
-        <section class="second-container">
+        <section class="creators">
+          <h3>Erstellt von unseren Studenten</h3>
           <div>
-            <img id="student-laptop" src="../images/them.png" />
-            <h2>Courses</h2>
-            <h3>Starte Deine Reise in eine neue Zukunft beim DCI!</h3>
-            <h4>Kostenlose, zertifizierte Kurse für alle!</h4>
-            <p>
-              Ein Job in der digitalen Industrie ist langweilig und eintönig?
-              Falsch! Hier ist es bunt, vielfältig und absolut kreativ. Menschen
-              aus der ganzen Welt kommen zusammen, um neue Lösungen zu
-              entwickeln und zu testen. Die digitale Industrie ist ständig im
-              Wandel - mit neuen Positionen, Herausforderungen und mehr
-              Freiheiten als in anderen Branchen. Um wettbewerbsfähig zu
-              bleiben, müssen Unternehmen bei der Digitalisierung mitziehen und
-              sich ebenfalls verändern. Dafür brauchen sie Experten - und das
-              ist Deine Chance.
-            </p>
+            <img class="unicorn" src="../images/Final_Codeicorn_38cm.png">
             <ul>
-              <li>96.000 offene Stellen</li>
-              <li>Hohe Gehälter (auch als Anfänger:in)</li>
-              <li>Gute Work-Life-Balance</li>
-              <li>Sichere Arbeitsplätze</li>
-              <li>Zukunftsorientierte Branche</li>
+              <li><a href='https://github.com/heyitsashleyhere' target="_blank">Ashley Jiang</a></li>
+              <li><a href='https://github.com/daanvanderputte' target="_blank">Daan van der Putte</a></li>
+              <li><a href='https://github.com/ivoserra' target="_blank">Ivo Serra</a></li>
+              <li><a href='https://github.com/luciapannunzio' target="_blank">Lucia Pannunzio</a></li>
             </ul>
-            <br />
-            <br />
-
-            <h1>Starte jetzt Deinen Weg in eine neue Karriere!</h1>
-            <p>
-              Alle unsere Kurse sind von der Agentur für Arbeit zertifiziert und
-              werden regelmäßig auf ihre Qualität überprüft. Das bedeutet auch,
-              dass sie über einen Bildungsgutschein der Agentur für Arbeit oder
-              des Jobcenters finanziert werden. Sie übernehmen die Kosten und Du
-              musst später keinen Cent zurückzahlen. Möchtest Du mehr über die
-              Vorteile einer Weiterbildung beim DCI erfahren? Dann klicke auf
-              den Button.
-            </p>
-            <button>
-              <a
-                href="https://digitalcareerinstitute.org/courses/"
-                target="_blank"
-                >Weiter zu den Kursen</a>
-            </button>
-
-        
-            </p>
           </div>
         </section>
-
-        <!-- --------------------------------------------------------------- -->
-
-        <section class="third-container">
-          <div>
-            <img id="people" src="../images/people.png" />
-            <h2>Career</h2>
-            <h3>Werde jetzt ein Teil des DCI</h3>
-            <p>
-              In den letzten Jahren ist das DCI stetig gewachsen - und es geht
-              weiter! Um unsere Mission in die Tat umzusetzen, jedem zu helfen,
-              einen sicheren Arbeitsplatz in der digitalen Industrie zu
-              bekommen, suchen wir immer nach Leuten, die daran interessiert
-              sind, sich uns anzuschließen.
-            </p>
-            <h4>My body, my career, my choice</h4>
-            <p>
-              Für uns spielt es keine Rolle, woher Du kommst, wen Du liebst oder
-              welche Hautfarbe Du hast. Sei einfach Du selbst, wie auch immer Du
-              bist. Wir leben das Motto: “Mein Körper, meine Karriere, meine
-              Wahl!” Kannst Du Dich als Teil davon sehen? Möchtest Du gemeinsam
-              mit uns wachsen und als Vorbild unserer Student:innen der LGBTQ+
-              Szene vorangehen? Dann schau Dir doch mal an, welche Stellen
-              gerade offen sind:
-            </p>
-            <button>
-              <a href="https://dci.jobs.personio.de/" target="_blank">
-              Unsere Stellenangebote</a>
-            </button>
-          </div>
-        </section>
-      </section>
-
-      <section class="creators">
-        <h3>Created by our students</h3>
-        <ul>
-          <li>Ashley Jiang</li>
-          <li>Daan van der Putte</li>
-          <li>Ivo Serra</li>
-          <li>Lucia Pannunzio</li>
-        </ul>
       </section>
     </main>
-
     <!-- Footer -->
     <footer>
       <!-- Rainbow picture in case we want to use it -->
       <!-- <img id="rainbow" src="./images/rainbow.svg" /> -->
     </footer>
-    <script></script>
-  </body>
+  </section>
+
+  <script>
+    //INITIAL ANIMATION
+
+    pushInStart({
+      debug: true
+    })
+
+
+    // TYPEWRITER ANIMATION
+    // this is not my code : OPEN SOURCE 
+    let TxtType = function (el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function () {
+      let i = this.loopNum % this.toRotate.length;
+      let fullTxt = this.toRotate[i];
+
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+
+      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+      let that = this;
+      let delta = 200 - Math.random() * 100;
+
+      if (this.isDeleting) {
+        delta /= 2;
+      }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+
+      setTimeout(function () {
+        that.tick();
+      }, delta);
+    };
+
+    window.onload = function () {
+      let elements = document.getElementsByClassName('type-animation');
+      for (let i = 0; i < elements.length; i++) {
+        let toRotate = elements[i].getAttribute('data-type');
+        let period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+      // INJECT CSS
+      let css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+      document.body.appendChild(css);
+    };
+  </script>
+</body>
+
 </html>

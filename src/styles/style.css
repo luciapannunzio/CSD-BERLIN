@@ -260,6 +260,16 @@ body {
   font-size: 0.7rem;
   margin: 0.2rem;
 }
+.Grid-container main .Inner-main .creators div ul li a {
+  text-decoration: none;
+  color: white;
+}
+.Grid-container main .Inner-main .creators div ul li a:hover {
+  text-decoration: underline;
+}
+.Grid-container main .Inner-main .creators div ul li a:visited, .Grid-container main .Inner-main .creators div ul li a:active {
+  color: white;
+}
 @media screen and (min-width: 768px) {
   .Grid-container main .Inner-main .welcome-message {
     height: 80vh;
