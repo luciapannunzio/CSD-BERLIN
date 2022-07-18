@@ -219,7 +219,7 @@
           </section>
         </section>
         <section class="creators">
-          <h3>Created by our students</h3>
+          <h3 id="animated-h3">Created by our students</h3>
           <div>
             <img class="unicorn" src="./images/Final_Codeicorn_38cm.png">
             <ul>
@@ -241,11 +241,9 @@
 
   <script>
     //INITIAL ANIMATION
-
     pushInStart({
       debug: true
     })
-
 
     // TYPEWRITER ANIMATION
     // this is not my code : OPEN SOURCE 
@@ -307,6 +305,24 @@
       css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
       document.body.appendChild(css);
     };
+  
+   // CreatedByStudents ANIMATION
+  const animatedH3 = document.getElementById('animated-h3');
+
+  function handleIntersection(entries) {
+    // The callback will return an array of entries, even if you are only observing a single item
+    entries.map((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('h3-visible')
+      } else {
+        entry.target.classList.remove('h3-visible')
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(handleIntersection);
+  observer.observe(animatedH3);
+
   </script>
 </body>
 
