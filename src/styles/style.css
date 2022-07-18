@@ -139,7 +139,7 @@ body {
 @media screen and (min-width: 1024px) {
   .Grid-container main {
     grid-column: 2/12;
-    top: 45px;
+    top: 4 5px;
   }
 }
 .Grid-container main .Inner-main {
@@ -247,6 +247,12 @@ body {
 .Grid-container main .Inner-main .content .container div ul li {
   font-size: 0.8rem;
   margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+.Grid-container main .Inner-main .content .container div ul li .icons {
+  width: 5%;
+  margin-right: 10px;
 }
 .Grid-container main .Inner-main .Ukrain-love {
   display: flex;
@@ -517,6 +523,12 @@ body {
   .Grid-container main .Inner-main .content .container div ul li {
     font-size: 18px;
     margin: 1rem 0;
+    display: flex;
+    align-items: center;
+  }
+  .Grid-container main .Inner-main .content .container div ul li .icons {
+    width: 2%;
+    margin-right: 10px;
   }
   .Grid-container main .Inner-main .content .Ukrain-love {
     display: flex;
