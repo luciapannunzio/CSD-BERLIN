@@ -32,6 +32,7 @@ body {
 
 
 
+
   header {
     width:100%;
     position: sticky;
@@ -275,6 +276,12 @@ body {
                     li{
                       font-size: 0.8rem;
                       margin:1rem 0;
+                      display: flex;
+                      align-items: center;
+                      .icons {
+                        width: 5%;
+                        margin-right: 10px;
+                      } 
                     }
                   }
   
@@ -642,13 +649,19 @@ body {
                       li{
                         font-size: 18px;
                         margin:1rem 0;
+                        display: flex;
+                        align-items: center;
+                        // This doesn't seem to target
+                        .icons {
+                          width: 2%;
+                          margin-right: 10px;
+                        }                 
                       }
                     }
-    
-                
                 }
           }
 
+// Ukraine Hearts
           .Ukrain-love{
             display:flex;
             align-items: center;
@@ -659,12 +672,11 @@ body {
               width:8%;
             }
           }
-    
+
     
           }
 
-        
-    
+// Creations
           .creators{
             width:100%;
             display:flex;
@@ -694,24 +706,12 @@ body {
                     li{
                       font-size: 0.7rem;
                       margin:0.2rem;
-    
                     }
                   }
-    
                 }
           }
         }
-
-
-  
-   
-  
-    }
-  
-  
-  
-  
-    
+    }  
   }
   
   // Footer
@@ -731,14 +731,7 @@ body {
       margin: 10px;
     }
   }
-
-
 }
-
-
-
-
-
 
 
 // // Header
