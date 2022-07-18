@@ -28,7 +28,7 @@ body {
 }
 @keyframes brainbow-splosion {
   0%{ background-size: 100px; }
-  50%{ background-size: 100vh; }
+  50%{ background-size: 180vh; }
   100%{ background-size: 600vh; }
 }
 
@@ -243,6 +243,7 @@ body {
                   h4 {
                     font-size: 18px;
                     margin-top: 3rem;
+                    margin-left: 1rem;
                   }
   
                   p{
@@ -441,10 +442,10 @@ body {
                       border-radius: 10px;
                       padding:1rem;
                       margin:3rem 0;
-                      &:hover {
+                      &:hover,
+                      &:active {
                         box-shadow:
                         0 0 8px 5px rgba(255, 255, 255, 0.5);
-                        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 12px, 2px 2px 2px rgba(206,89,55,0);
                       }
                     }
     
