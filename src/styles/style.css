@@ -24,6 +24,7 @@ body {
   overflow: hidden;
   animation: brainbow-splosion 2s ease;
   animation-fill-mode: forwards;
+  pointer-events: none;
 }
 
 @keyframes brainbow-splosion {
@@ -40,7 +41,6 @@ body {
     opacity: 0;
   }
 }
-
 .Grid-container {
   background-color: #1b39ca;
 }

@@ -17,7 +17,7 @@ body {
 
 /* Intro animation (expanding circle rainbow) shown when entering the page */
 #awesomecool-rainbow-explosion-intro-animation-box {
-  background:#ffffff url(./images/rainbow.svg) center no-repeat;
+  background:#ffffff url(/images/circle-rainbow.svg) center no-repeat;
   background-size: 100px;
   z-index: 9999;
   position: fixed;
@@ -26,6 +26,7 @@ body {
   overflow: hidden;
   animation: brainbow-splosion 2s ease;
   animation-fill-mode: forwards;
+  pointer-events: none;
 }
 @keyframes brainbow-splosion {
   0%{ background-size: 100px; opacity: 1 }
