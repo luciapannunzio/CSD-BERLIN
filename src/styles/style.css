@@ -114,7 +114,7 @@ body {
 @media screen and (min-width: 1024px) {
   .Grid-container main {
     grid-column: 2/12;
-    top: 45px;
+    top: 4 5px;
   }
 }
 .Grid-container main .Inner-main {
