@@ -13,6 +13,31 @@ body {
   color: white;
 }
 
+/* Intro animation (expanding circle rainbow) shown when entering the page */
+#awesomecool-rainbow-explosion-intro-animation-box {
+  background: url(/images/Rainbow_Circle.svg) center no-repeat;
+  background-size: 100px;
+  z-index: 9999;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation: brainbow-splosion 3s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+@keyframes brainbow-splosion {
+  0% {
+    background-size: 100px;
+  }
+  50% {
+    background-size: 100vh;
+  }
+  100% {
+    background-size: 600vh;
+  }
+}
 .Grid-container {
   background-color: #1b39ca;
 }

@@ -11,12 +11,30 @@ body {
   font-family: $font-principal;
   background-color: $background-color;
   color:white;
- 
-  
+}
+
+/* Intro animation (expanding circle rainbow) shown when entering the page */
+#awesomecool-rainbow-explosion-intro-animation-box {
+  background: url(/images/Rainbow_Circle.svg) center no-repeat;
+  background-size: 100px;
+  z-index: 9999;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation: brainbow-splosion 3s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+@keyframes brainbow-splosion {
+  0%{ background-size: 100px; }
+  50%{ background-size: 100vh; }
+  100%{ background-size: 600vh; }
 }
 
 .Grid-container{
   background-color: $background-color;
+
 
   @media screen and(min-width:768px){
     display:grid;
@@ -702,6 +720,15 @@ body {
   }
 }
 
+// .Grid-container {
+//   animation: fill-content 6s ease-in;
+//   animation-iteration-count: 1;
+//   @keyframes fill-content {
+//     0%{ clip-path: circle(5% at 30% 50%); visibility: hidden; }
+//     30%{ clip-path: circle(100% at 50% 50%) }
+//     100%{ clip-path: inset(0 0 0 0); visibility: visible; }
+//   }
+// }
 
 // // Header
 // header {
