@@ -13,6 +13,31 @@ body {
   color: white;
 }
 
+/* Intro animation (expanding circle rainbow) shown when entering the page */
+#awesomecool-rainbow-explosion-intro-animation-box {
+  background: url(/images/Rainbow_Circle.svg) center no-repeat;
+  background-size: 100px;
+  z-index: 9999;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation: brainbow-splosion 3s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+@keyframes brainbow-splosion {
+  0% {
+    background-size: 100px;
+  }
+  50% {
+    background-size: 180vh;
+  }
+  100% {
+    background-size: 600vh;
+  }
+}
 .Grid-container {
   background-color: #1b39ca;
 }
@@ -200,6 +225,7 @@ body {
 .Grid-container main .Inner-main .content .container div h4 {
   font-size: 18px;
   margin-top: 3rem;
+  margin-left: 1rem;
 }
 .Grid-container main .Inner-main .content .container div p {
   padding: 1rem;
@@ -356,9 +382,8 @@ body {
     padding: 1rem;
     margin: 3rem 0;
   }
-  .Grid-container main .Inner-main .content .container div a:hover {
+  .Grid-container main .Inner-main .content .container div a:hover, .Grid-container main .Inner-main .content .container div a:active {
     box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.5);
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 12px, 2px 2px 2px rgba(206, 89, 55, 0);
   }
   .Grid-container main .Inner-main .content .container div ul {
     padding: 1rem;
@@ -523,6 +548,12 @@ body {
   }
   .Grid-container main .Inner-main .creators h3 {
     font-size: 1.5rem;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .Grid-container main .Inner-main .creators .h3-visible {
+    opacity: 1;
+    transform: translateX(0);
   }
   .Grid-container main .Inner-main .creators div {
     width: 100%;
