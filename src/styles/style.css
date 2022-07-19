@@ -13,31 +13,40 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
 /* Intro animation (expanding circle rainbow) shown when entering the page */
 #awesomecool-rainbow-explosion-intro-animation-box {
-  background: url(/images/Rainbow_Circle.svg) center no-repeat;
+  background: #ffffff url(/images/circle-rainbow.svg) center no-repeat;
   background-size: 100px;
   z-index: 9999;
   position: fixed;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  animation: brainbow-splosion 3s;
+  animation: brainbow-splosion 2.2s;
   animation-fill-mode: forwards;
   pointer-events: none;
 }
-
 @keyframes brainbow-splosion {
   0% {
+    opacity: 1;
     background-size: 100px;
   }
-  50% {
-    background-size: 180vh;
+  80% {
+    opacity: 1;
+    background-size: 150vh;
   }
   100% {
+    opacity: 0;
     background-size: 600vh;
   }
 }
+
+/* Main content */
 .Grid-container {
   background-color: #1b39ca;
 }
@@ -55,18 +64,16 @@ body {
   }
 }
 .Grid-container header {
-  width: 100%;
   position: sticky;
   top: 0;
   background-color: #1b39ca;
   z-index: 1;
 }
 .Grid-container header .Header-inner {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 0.5rem;
+  padding: 2rem;
 }
 .Grid-container header .Header-inner .logo {
   width: 30%;
@@ -76,26 +83,12 @@ body {
   align-items: center;
 }
 .Grid-container header .Header-inner .languages-buttons a {
-  text-decoration: none;
-  color: white;
   font-size: 1.5rem;
   margin: 0rem 1rem;
-}
-.Grid-container header .nav-bar {
-  display: flex;
-  justify-content: space-around;
-  font-size: 1rem;
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .Grid-container header {
     grid-column: 1/9;
-  }
-  .Grid-container header .Header-inner {
-    width: 100%;
-    padding: 1rem;
   }
   .Grid-container header .Header-inner .logo {
     width: 40%;
@@ -105,18 +98,8 @@ body {
     align-items: center;
   }
   .Grid-container header .Header-inner .languages-buttons a {
-    text-decoration: none;
-    color: white;
     font-size: 1.5rem;
     margin: 0rem 1rem;
-  }
-  .Grid-container header .nav-bar {
-    display: flex;
-    justify-content: space-around;
-    font-size: 1rem;
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -126,9 +109,7 @@ body {
 }
 .Grid-container main {
   position: relative;
-  top: 100px;
-  width: 100%;
-  background-color: #1b39ca;
+  top: 30px;
 }
 @media screen and (min-width: 768px) {
   .Grid-container main {
@@ -142,493 +123,314 @@ body {
     top: 4 5px;
   }
 }
-.Grid-container main .Inner-main {
-  width: 100%;
-}
-.Grid-container main .Inner-main .welcome-message {
-  width: 100%;
+.Grid-container main .welcome-message {
   height: 70vh;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
 }
-.Grid-container main .Inner-main .welcome-message .hero-text {
-  width: 100%;
+.Grid-container main .welcome-message .hero-text {
   height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.Grid-container main .Inner-main .welcome-message .hero-text h1 {
+.Grid-container main .welcome-message .hero-text h1 {
   font-size: 50px;
 }
-.Grid-container main .Inner-main .welcome-message .hero-text .dynamic {
-  height: 50px;
-}
-.Grid-container main .Inner-main .welcome-message img {
-  width: 100%;
-}
-.Grid-container main .Inner-main .image-heart {
-  width: 100%;
+.Grid-container main .image-heart {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 32px;
+  padding: 2rem;
 }
-.Grid-container main .Inner-main .image-heart #heart {
+.Grid-container main .image-heart #heart {
   width: 100%;
 }
-.Grid-container main .Inner-main .image-heart h2 {
+.Grid-container main .image-heart h2 {
   font-size: 28px;
   margin: 40px;
 }
-.Grid-container main .Inner-main .content {
-  width: 100%;
+.Grid-container main .content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.Grid-container main .Inner-main .content .container {
+.Grid-container main .content .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 3rem 0;
 }
-.Grid-container main .Inner-main .content .container div {
+.Grid-container main .content .container div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1rem;
 }
-.Grid-container main .Inner-main .content .container div .girl, .Grid-container main .Inner-main .content .container div .students {
+.Grid-container main .content .container div .girl,
+.Grid-container main .content .container div .students {
   width: 80%;
   margin-top: 2rem;
 }
-.Grid-container main .Inner-main .content .container div .boy, .Grid-container main .Inner-main .content .container div .women {
+.Grid-container main .content .container div .boy,
+.Grid-container main .content .container div .women {
   width: 50%;
   margin-top: 3rem;
 }
-.Grid-container main .Inner-main .content .container div h1 {
+.Grid-container main .content .container div h1 {
   font-size: 40px;
 }
-.Grid-container main .Inner-main .content .container div h2 {
+.Grid-container main .content .container div h2 {
   font-size: 28px;
 }
-.Grid-container main .Inner-main .content .container div h3 {
+.Grid-container main .content .container div h3 {
   text-align: center;
   font-size: 18px;
   margin-bottom: 1rem;
 }
-.Grid-container main .Inner-main .content .container div h4 {
+.Grid-container main .content .container div h4 {
   font-size: 18px;
   margin-top: 3rem;
   margin-left: 1rem;
 }
-.Grid-container main .Inner-main .content .container div p {
+.Grid-container main .content .container div p {
   padding: 1rem;
   font-size: 18px;
   line-height: 1.5rem;
 }
-.Grid-container main .Inner-main .content .container div a {
-  text-decoration: none;
+.Grid-container main .content .container div a {
   border: 1px solid whitesmoke;
   border-radius: 10px;
   padding: 1rem;
   margin: 3rem 0;
-  color: whitesmoke;
   font-size: 20px;
 }
-.Grid-container main .Inner-main .content .container div ul {
+.Grid-container main .content .container div a:hover, .Grid-container main .content .container div a:active {
+  box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.5);
+}
+.Grid-container main .content .container div ul {
   padding: 1rem;
   list-style: none;
 }
-.Grid-container main .Inner-main .content .container div ul li {
+.Grid-container main .content .container div ul li {
   font-size: 0.8rem;
   margin: 1rem 0;
   display: flex;
   align-items: center;
 }
-.Grid-container main .Inner-main .content .container div ul li .icons {
+.Grid-container main .content .container div ul li .icons {
   width: 5%;
   margin-right: 10px;
 }
-.Grid-container main .Inner-main .Ukrain-love {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.Grid-container main .Inner-main .Ukrain-love .heart {
-  width: 8%;
-}
-.Grid-container main .Inner-main .creators {
-  width: 100%;
+.Grid-container main .creators {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 0;
+  margin: 4rem 0;
 }
-.Grid-container main .Inner-main .creators h3 {
+.Grid-container main .creators h3 {
+  opacity: 0;
   font-size: 1.5rem;
+  transform: translateY(100px);
+  transition: opacity 1s ease, transform 1s ease;
 }
-.Grid-container main .Inner-main .creators div {
-  width: 100%;
+.Grid-container main .creators .h3-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.Grid-container main .creators div {
   margin-top: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 1rem;
 }
-.Grid-container main .Inner-main .creators div .unicorn {
+.Grid-container main .creators div .unicorn {
   width: 50%;
 }
-.Grid-container main .Inner-main .creators div ul {
+.Grid-container main .creators div ul {
   list-style: none;
 }
-.Grid-container main .Inner-main .creators div ul li {
-  font-size: 0.7rem;
+.Grid-container main .creators div ul li {
+  font-size: 0.8rem;
   margin: 0.2rem;
 }
-.Grid-container main .Inner-main .creators div ul li a {
-  text-decoration: none;
-  color: white;
-}
-.Grid-container main .Inner-main .creators div ul li a:hover {
+.Grid-container main .creators div ul li a:hover {
   text-decoration: underline;
 }
-.Grid-container main .Inner-main .creators div ul li a:visited, .Grid-container main .Inner-main .creators div ul li a:active {
+.Grid-container main .creators div ul li a:visited, .Grid-container main .creators div ul li a:active {
   color: white;
 }
 @media screen and (min-width: 768px) {
-  .Grid-container main .Inner-main .welcome-message {
-    height: 80vh;
-  }
-  .Grid-container main .Inner-main .welcome-message .hero-text {
-    width: 100%;
+  .Grid-container main .welcome-message .hero-text {
     height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
-  .Grid-container main .Inner-main .welcome-message .hero-text h1 {
-    font-size: 4rem;
-  }
-  .Grid-container main .Inner-main .image-heart {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 32px;
-  }
-  .Grid-container main .Inner-main .image-heart #heart {
-    width: 100%;
-  }
-  .Grid-container main .Inner-main .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .Grid-container main .Inner-main .content .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .Grid-container main .content .container {
     margin: 5rem 0;
   }
-  .Grid-container main .Inner-main .content .container div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-  .Grid-container main .Inner-main .content .container div .girl, .Grid-container main .Inner-main .content .container div .students {
-    width: 80%;
-    margin-top: 2rem;
-  }
-  .Grid-container main .Inner-main .content .container div .boy, .Grid-container main .Inner-main .content .container div .women {
+  .Grid-container main .content .container div .boy,
+.Grid-container main .content .container div .women {
     width: 45%;
     margin-top: 3rem;
   }
-  .Grid-container main .Inner-main .content .container div .boy {
+  .Grid-container main .content .container div .boy {
     width: 30%;
   }
-  .Grid-container main .Inner-main .content .container div h2 {
+  .Grid-container main .content .container div h2 {
     font-size: 3rem;
     margin: 5rem 0;
   }
-  .Grid-container main .Inner-main .content .container div h3 {
+  .Grid-container main .content .container div h3 {
     text-align: none;
     font-size: 2rem;
     margin: 0rem 0;
   }
-  .Grid-container main .Inner-main .content .container div h4 {
+  .Grid-container main .content .container div h4 {
     font-size: 1.5rem;
     margin-top: 4rem;
   }
-  .Grid-container main .Inner-main .content .container div p {
+  .Grid-container main .content .container div p {
     padding: 3rem;
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .Grid-container main .Inner-main .content .container div a {
-    text-decoration: none;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 3rem 0;
-  }
-  .Grid-container main .Inner-main .content .container div a:hover, .Grid-container main .Inner-main .content .container div a:active {
-    box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.5);
-  }
-  .Grid-container main .Inner-main .content .container div ul {
-    padding: 1rem;
-    list-style: none;
-  }
-  .Grid-container main .Inner-main .content .container div ul li {
-    font-size: 0.8rem;
-    margin: 1rem 0;
-  }
-  .Grid-container main .Inner-main .content .Ukrain-love {
-    width: 100%;
-  }
-  .Grid-container main .Inner-main .content .Ukrain-love .heart {
-    width: 10%;
-  }
-  .Grid-container main .Inner-main .content a {
-    color: whitesmoke;
-  }
-  .Grid-container main .Inner-main .creators {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .Grid-container main .Inner-main .creators h3 {
-    font-size: 1.5rem;
-  }
-  .Grid-container main .Inner-main .creators div {
-    width: 100%;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-  }
-  .Grid-container main .Inner-main .creators div .unicorn {
-    width: 50%;
-  }
-  .Grid-container main .Inner-main .creators div ul {
-    list-style: none;
-  }
-  .Grid-container main .Inner-main .creators div ul li {
-    font-size: 0.8rem;
-    margin: 0.2rem;
-  }
 }
 @media screen and (min-width: 1024px) {
-  .Grid-container main .Inner-main .welcome-message {
-    width: 100%;
+  .Grid-container main .welcome-message {
     height: 80vh;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
   }
-  .Grid-container main .Inner-main .welcome-message .hero-text {
-    width: 100%;
+  .Grid-container main .welcome-message .hero-text {
     height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 2.5rem;
   }
-  .Grid-container main .Inner-main .welcome-message .hero-text h1 {
-    font-size: 42px;
-  }
-  .Grid-container main .Inner-main .welcome-message img {
+  .Grid-container main .welcome-message img {
     width: 20%;
   }
-  .Grid-container main .Inner-main .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .Grid-container main .Inner-main .content .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .Grid-container main .content .container {
     margin: 3rem 0;
   }
-  .Grid-container main .Inner-main .content .container div {
+  .Grid-container main .content .container div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem;
   }
-  .Grid-container main .Inner-main .content .container div .girl, .Grid-container main .Inner-main .content .container div .students {
+  .Grid-container main .content .container div .girl,
+.Grid-container main .content .container div .students {
     width: 50%;
     margin-top: 2rem;
   }
-  .Grid-container main .Inner-main .content .container div .boy, .Grid-container main .Inner-main .content .container div .women {
+  .Grid-container main .content .container div .boy,
+.Grid-container main .content .container div .women {
     width: 30%;
     margin-top: 3rem;
   }
-  .Grid-container main .Inner-main .content .container div .heart {
+  .Grid-container main .content .container div .heart {
     width: 50%;
     margin: 4rem 0;
   }
-  .Grid-container main .Inner-main .content .container div .boy {
+  .Grid-container main .content .container div .boy {
     width: 30%;
   }
-  .Grid-container main .Inner-main .content .container div h1 {
+  .Grid-container main .content .container div h1 {
     font-size: 42px;
   }
-  .Grid-container main .Inner-main .content .container div h2 {
+  .Grid-container main .content .container div h2 {
     font-size: 36px;
   }
-  .Grid-container main .Inner-main .content .container div h3 {
+  .Grid-container main .content .container div h3 {
     text-align: center;
     font-size: 20px;
   }
-  .Grid-container main .Inner-main .content .container div h4 {
+  .Grid-container main .content .container div h4 {
     font-size: 20px;
     margin-top: 10rem;
     margin-bottom: 3rem;
   }
-  .Grid-container main .Inner-main .content .container div p {
+  .Grid-container main .content .container div p {
     padding: 0.5rem;
     font-size: 18px;
-    line-height: 3.25rem;
   }
-  .Grid-container main .Inner-main .content .container div a {
-    text-decoration: none;
+  .Grid-container main .content .container div a {
     border: 1px solid whitesmoke;
     border-radius: 10px;
     padding: 1rem;
     margin: 3rem 0;
-    color: whitesmoke;
   }
-  .Grid-container main .Inner-main .content .container div ul {
+  .Grid-container main .content .container div ul {
     padding: 1rem;
     list-style: none;
   }
-  .Grid-container main .Inner-main .content .container div ul li {
+  .Grid-container main .content .container div ul li {
     font-size: 18px;
     margin: 1rem 0;
     display: flex;
     align-items: center;
   }
-  .Grid-container main .Inner-main .content .container div ul li .icons {
+  .Grid-container main .content .container div ul li .icons {
     width: 2%;
     margin-right: 10px;
   }
-  .Grid-container main .Inner-main .content .Ukrain-love {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  .Grid-container main .Inner-main .content .Ukrain-love .heart {
-    width: 8%;
-  }
-  .Grid-container main .Inner-main .creators {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5rem 0;
-  }
-  .Grid-container main .Inner-main .creators h3 {
-    font-size: 1.5rem;
-    transform: translateY(100px);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  .Grid-container main .Inner-main .creators .h3-visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  .Grid-container main .Inner-main .creators div {
-    width: 100%;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-  }
-  .Grid-container main .Inner-main .creators div .unicorn {
-    width: 50%;
-  }
-  .Grid-container main .Inner-main .creators div ul {
-    list-style: none;
-  }
-  .Grid-container main .Inner-main .creators div ul li {
-    font-size: 0.7rem;
-    margin: 0.2rem;
-  }
-}
-.Grid-container footer ul {
-  font-weight: bolder;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  margin: 10px;
 }
 
-.tag-hearts {
-  font-size: 19px;
+/* Rainbow color code hearts */
+.tag-hearts > span:nth-of-type(n+12) {
+  display: none;
 }
-
-#heart-red {
-  color: #E50000;
+@media screen and (min-width: 768px) {
+  .tag-hearts > span:nth-of-type(n+12) {
+    display: inline-block;
+  }
+  .tag-hearts > span:nth-of-type(n+18) {
+    display: none;
+  }
 }
-
-#heart-orange {
-  color: #FF8D00;
+@media screen and (min-width: 1024px) {
+  .tag-hearts > span:nth-of-type(n+12) {
+    display: inline-block;
+  }
+  .tag-hearts > span:nth-of-type(n+18) {
+    display: inline-block;
+  }
 }
-
-#heart-yellow {
-  color: #FFEE00;
+.tag-hearts .heart-red {
+  color: #e50000;
 }
-
-#heart-green {
+.tag-hearts .heart-orange {
+  color: #ff8d00;
+}
+.tag-hearts .heart-yellow {
+  color: #ffee00;
+}
+.tag-hearts .heart-green {
   color: #028121;
 }
-
-#heart-blue {
-  color: #004CFF;
+.tag-hearts .heart-blue {
+  color: #004cff;
 }
-
-#heart-purple {
+.tag-hearts .heart-purple {
   color: #760088;
 }
-
-#heart-black {
+.tag-hearts .heart-black {
   color: #000000;
 }
-
-#heart-brown {
+.tag-hearts .heart-brown {
   color: #613915;
 }
-
-#heart-aqua {
-  color: #5BCFFB;
+.tag-hearts .heart-aqua {
+  color: #5bcffb;
 }
-
-#heart-pink {
-  color: #FFAFC7;
+.tag-hearts .heart-pink {
+  color: #ffafc7;
 }
-
-#heart-white {
-  color: FFFFFF;
+.tag-hearts .heart-white {
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */
