@@ -63,7 +63,8 @@ body {
         padding:0.5rem;
     
         .logo{
-          width:20%;
+          // 20% without link
+          width:30%;
         }
     
         .languages-buttons{
@@ -192,6 +193,11 @@ body {
           #heart {
             width: 100%;
           }
+          // #laptop {
+          //   width: 50%
+          // }
+
+        
           h2 {
             font-size: 28px;
             margin: 40px;
@@ -727,4 +733,53 @@ body {
       margin: 10px;
     }
   }
+}
+
+// Changes Daan & Lucia 19.7.
+
+.tag-hearts {
+  font-size: 19px;
+}
+
+#heart-red {
+  color: #E50000;
+}
+
+#heart-orange {
+  color: #FF8D00
+}
+
+#heart-yellow {
+  color: #FFEE00
+}
+
+#heart-green {
+  color: #028121
+}
+
+#heart-blue {
+  color: #004CFF
+}
+
+#heart-purple {
+  color: #760088
+}
+#heart-black {
+  color: #000000
+}
+
+#heart-brown {
+  color: #613915
+}
+
+#heart-aqua {
+  color: #5BCFFB
+}
+
+#heart-pink {
+  color: #FFAFC7 
+}
+
+#heart-white {
+  color: FFFFFF
 }

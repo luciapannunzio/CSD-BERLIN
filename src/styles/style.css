@@ -69,7 +69,7 @@ body {
   padding: 0.5rem;
 }
 .Grid-container header .Header-inner .logo {
-  width: 20%;
+  width: 30%;
 }
 .Grid-container header .Header-inner .languages-buttons {
   display: flex;
@@ -581,6 +581,54 @@ body {
   align-items: center;
   list-style: none;
   margin: 10px;
+}
+
+.tag-hearts {
+  font-size: 19px;
+}
+
+#heart-red {
+  color: #E50000;
+}
+
+#heart-orange {
+  color: #FF8D00;
+}
+
+#heart-yellow {
+  color: #FFEE00;
+}
+
+#heart-green {
+  color: #028121;
+}
+
+#heart-blue {
+  color: #004CFF;
+}
+
+#heart-purple {
+  color: #760088;
+}
+
+#heart-black {
+  color: #000000;
+}
+
+#heart-brown {
+  color: #613915;
+}
+
+#heart-aqua {
+  color: #5BCFFB;
+}
+
+#heart-pink {
+  color: #FFAFC7;
+}
+
+#heart-white {
+  color: FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */
