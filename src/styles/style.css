@@ -30,8 +30,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: brainbow-splosion-bg 2.2s;
-  animation-fill-mode: forwards;
 }
 @keyframes brainbow-splosion-bg {
   0% {
@@ -46,8 +44,6 @@ a {
 }
 #awesomecool-rainbow-explosion-intro-animation-box svg {
   width: 100px;
-  animation: brainbow-splosion 2.2s;
-  animation-fill-mode: forwards;
 }
 @keyframes brainbow-splosion {
   0% {
@@ -62,6 +58,14 @@ a {
     opacity: 0;
     width: 600vh;
   }
+}
+#awesomecool-rainbow-explosion-intro-animation-box.intro {
+  animation: brainbow-splosion-bg 2.2s;
+  animation-fill-mode: forwards;
+}
+#awesomecool-rainbow-explosion-intro-animation-box.intro svg {
+  animation: brainbow-splosion 2.2s;
+  animation-fill-mode: forwards;
 }
 
 /* Main content */

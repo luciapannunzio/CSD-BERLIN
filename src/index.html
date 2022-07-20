@@ -166,42 +166,47 @@
       </section>
     </main>
 
-  </section>
+  </div>
 
   <script>
-    // Typewriter animation
-    const strings = ["diversity", "create"]
-    const element = document.querySelector(".typewriter")
-    let previouslyRenderedIndex = 0
-    let currentString = 0
-    let forwards = true
+    // Trigger animations **after** everything loads
+    document.addEventListener("DOMContentLoaded", () => {
+      // Intro animation triggered by adding class
+      document.querySelector("#awesomecool-rainbow-explosion-intro-animation-box").classList.add("intro")
 
-    function tick() {
-      if (previouslyRenderedIndex === strings[currentString].length) {
-        forwards = false
+      // Typewriter animation
+      const strings = ["diversity", "create"]
+      const element = document.querySelector(".typewriter")
+      let previouslyRenderedIndex = 0
+      let currentString = 0
+      let forwards = true
+
+      function tick() {
+        if (previouslyRenderedIndex === strings[currentString].length) {
+          forwards = false
+        }
+
+        if (previouslyRenderedIndex === 0) {
+          forwards = true
+          currentString = currentString ? 0 : 1
+        }
+
+        forwards ? previouslyRenderedIndex++ : previouslyRenderedIndex--
+
+        element.textContent = strings[currentString].slice(0,previouslyRenderedIndex)
+
+        if (previouslyRenderedIndex === 0) {
+          // A stable pause in the beginning of a word makes it look less crazy
+          setTimeout(tick, 400)
+        } else {
+          // Randomizing and erasing faster than typing makes it look more human
+          setTimeout(tick, 10+(Math.random()*forwards?180:30))
+        }
       }
 
-      if (previouslyRenderedIndex === 0) {
-        forwards = true
-        currentString = currentString ? 0 : 1
-      }
-
-      forwards ? previouslyRenderedIndex++ : previouslyRenderedIndex--
-
-      element.textContent = strings[currentString].slice(0,previouslyRenderedIndex)
-
-      if (previouslyRenderedIndex === 0) {
-        // A stable pause in the beginning of a word makes it look less crazy
-        setTimeout(tick, 400)
-      } else {
-        // Randomizing and erasing faster than typing makes it look more human
-        setTimeout(tick, 10+(Math.random()*forwards?180:30))
-      }
-    }
-
-    // At first wait until right before the intro rainbow animation stops
-    setTimeout(tick, 2100)
-
+      // At first wait until right before the intro rainbow animation stops
+      setTimeout(tick, 2100)
+    })
 
     // CreatedByStudents animation
     const animatedH3 = document.getElementById('animated-h3');

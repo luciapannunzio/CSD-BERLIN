@@ -29,8 +29,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: brainbow-splosion-bg 2.2s;
-  animation-fill-mode: forwards;
 
   @keyframes brainbow-splosion-bg {
     0% {
@@ -46,8 +44,6 @@ a {
 
   svg {
     width: 100px;
-    animation: brainbow-splosion 2.2s;
-    animation-fill-mode: forwards;
     @keyframes brainbow-splosion {
       0% {
         opacity: 1;
@@ -61,6 +57,17 @@ a {
         opacity: 0;
         width: 600vh;
       }
+    }
+  }
+
+  // Trigger intro animations class is inserted by JavaScript
+  &.intro {
+    animation: brainbow-splosion-bg 2.2s;
+    animation-fill-mode: forwards;
+
+    svg {
+      animation: brainbow-splosion 2.2s;
+      animation-fill-mode: forwards;
     }
   }
 }
