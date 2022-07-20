@@ -8,8 +8,6 @@
   <title>DCI ❤ CSD</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/pushin/dist/pushin.min.css" />
-  <script type="text/javascript" src="https://unpkg.com/pushin/dist/umd/pushin.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +15,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630.21 634.73"><defs><style>.cls-1{fill:#ed2524;}.cls-2{fill:#fbaf17;}.cls-3{fill:#dfe21c;}.cls-4{fill:#732a84;}.cls-5{fill:#2db24a;}.cls-6{fill:#2558a7;}</style></defs><circle class="cls-4" cx="315.11" cy="321.88" r="306.39"/><circle class="cls-5" cx="315.11" cy="321.88" r="273"/><circle class="cls-3" cx="315.11" cy="321.88" r="244.41"/><circle class="cls-2" cx="315.11" cy="321.88" r="214.83"/><g><circle class="cls-6" cx="315.11" cy="321.88" r="169.86"/><path class="cls-1" d="M315.11,505.91c-101.48,0-184.03-82.56-184.03-184.03s82.56-184.03,184.03-184.03,184.03,82.56,184.03,184.03-82.56,184.03-184.03,184.03Zm0-339.72c-85.84,0-155.69,69.84-155.69,155.69s69.84,155.69,155.69,155.69,155.69-69.84,155.69-155.69-69.84-155.69-155.69-155.69Z"/></g></svg>
   </div>
 
-  <section class="Grid-container">
+  <div class="Grid-container">
 
     <header>
       <section class="Header-inner">
@@ -34,9 +32,9 @@
         <div class="hero-text">
           <h1>Don't hate</h1>
           <div class="dynamic">
-            <h1 class="type-animation" data-period="2000" data-type='["&lt create &gt", "&lt diversity &gt"]'>
-              <span class="wrap"></span>
-            </h1>
+            <div class="dynamic">
+              <h1>&lt; <span class="typewriter"></span> &gt;</h1>
+            </div>
           </div>
         </div>
       </section>
@@ -166,7 +164,7 @@
       </section>
 
       <section class="creators">
-        <h3>Erstellt von unseren Studenten</h3>
+        <h3 id="animated-h3">Erstellt von unseren Studenten</h3>
         <div>
           <img class="unicorn" src="../images/Final_Codeicorn_38cm.png">
           <ul>
@@ -182,70 +180,41 @@
   </section>
 
   <script>
-    //INITIAL ANIMATION
+    // Typewriter animation
+    const strings = ["diversity", "create"]
+    const element = document.querySelector(".typewriter")
+    let previouslyRenderedIndex = 0
+    let currentString = 0
+    let forwards = true
 
-    pushInStart({
-      debug: true
-    })
+    function tick() {
+      if (previouslyRenderedIndex === strings[currentString].length) {
+        forwards = false
+      }
 
+      if (previouslyRenderedIndex === 0) {
+        forwards = true
+        currentString = currentString ? 0 : 1
+      }
 
-    // TYPEWRITER ANIMATION
-    // this is not my code : OPEN SOURCE 
-    let TxtType = function (el, toRotate, period) {
-      this.toRotate = toRotate;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = '';
-      this.tick();
-      this.isDeleting = false;
-    };
+      forwards ? previouslyRenderedIndex++ : previouslyRenderedIndex--
 
-    TxtType.prototype.tick = function () {
-      let i = this.loopNum % this.toRotate.length;
-      let fullTxt = this.toRotate[i];
+      element.textContent = strings[currentString].slice(0,previouslyRenderedIndex)
 
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      if (previouslyRenderedIndex === 0) {
+        // A stable pause in the beginning of a word makes it look less crazy
+        setTimeout(tick, 400)
       } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        // Randomizing and erasing faster than typing makes it look more human
+        setTimeout(tick, 10+(Math.random()*forwards?180:30))
       }
+    }
 
-      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+    // At first wait until right before the intro rainbow animation stops
+    setTimeout(tick, 2100)
 
-      let that = this;
-      let delta = 200 - Math.random() * 100;
 
-      if (this.isDeleting) {
-        delta /= 2;
-      }
-
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
-
-      setTimeout(function () {
-        that.tick();
-      }, delta);
-    };
-
-    window.onload = function () {
-      let elements = document.getElementsByClassName('type-animation');
-      for (let i = 0; i < elements.length; i++) {
-        let toRotate = elements[i].getAttribute('data-type');
-        let period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
-      }
-    };
-
-    // CreatedByStudents ANIMATION
+    // CreatedByStudents animation
     const animatedH3 = document.getElementById('animated-h3');
     function handleIntersection(entries) {
       // The callback will return an array of entries, even if you are only observing a single item
