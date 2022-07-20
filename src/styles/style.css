@@ -20,29 +20,47 @@ a {
 
 /* Intro animation (expanding circle rainbow) shown when entering the page */
 #awesomecool-rainbow-explosion-intro-animation-box {
-  background: #ffffff url(/images/circle-rainbow.svg) center no-repeat;
-  background-size: 100px;
+  background: #ffffff;
   z-index: 9999;
   position: fixed;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: brainbow-splosion-bg 2.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes brainbow-splosion-bg {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#awesomecool-rainbow-explosion-intro-animation-box svg {
+  width: 100px;
   animation: brainbow-splosion 2.2s;
   animation-fill-mode: forwards;
-  pointer-events: none;
 }
 @keyframes brainbow-splosion {
   0% {
     opacity: 1;
-    background-size: 100px;
+    width: 100px;
   }
   80% {
     opacity: 1;
-    background-size: 150vh;
+    width: 150vh;
   }
   100% {
     opacity: 0;
-    background-size: 600vh;
+    width: 600vh;
   }
 }
 
