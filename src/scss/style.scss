@@ -47,7 +47,7 @@ ul { margin: 1.5rem; padding: 0; list-style-type: none; }
 /* Intro animation (expanding circle rainbow) shown when entering the page */
 #awesomecool-rainbow-explosion-intro-animation-box {
   background: #ffffff;
-  z-index: 9999;
+  z-index: 2;
   position: fixed;
   min-width: 100vw;
   min-height: 100vh;
@@ -111,49 +111,32 @@ ul { margin: 1.5rem; padding: 0; list-style-type: none; }
 
 /* Main layout rules */
 .Grid-container {
-  max-width: 1200px; /* Helps make page look better on BIG screens, also gives max image size */
+  max-width: 1024px; /* Helps make page look better on BIG screens, also gives max image size */
   min-width: 320px; /* Avoid content smushing with very small windows */
   margin: 0 auto;
   background-color: $background-color;
-
-  @media screen and(min-width:768px) {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 1.5rem;
-  }
-
-  @media screen and(min-width:1024px) {
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
-  }
 
   header {
     position: sticky;
     top: 0;
     background-color: $background-color;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 2rem;
 
-    .Header-inner {
+    .logo { width: 30%; }
+
+    .languages-buttons {
       display: flex;
-      justify-content: space-between;
-      align-content: center;
-      padding: 2rem;
+      align-items: center;
+      font-size: 1.5rem;
 
-      .logo { width: 30%; }
-
-      .languages-buttons {
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-
-        a {
-          margin: 0rem 1rem;
-        }
+      a {
+        margin: 0rem 1rem;
       }
     }
-
-    @media screen and(min-width:768px) { grid-column: 1/9; }
-    @media screen and(min-width:1024px) { grid-column: 2/12; }
   }
 }
 
@@ -164,7 +147,7 @@ main {
   align-items: center;
 
   .hero-text {
-    height: 50vh;
+    height: 60vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -229,8 +212,6 @@ main {
   }
 
   @media screen and(min-width:768px) {
-    grid-column: 2/8;
-
     .container {
       .boy,
       .women {
@@ -245,41 +226,16 @@ main {
   }
 
   @media screen and(min-width:1024px) {
-    grid-column: 2/12;
-
     .container {
       .girl,
       .students {
         width: 50%;
-        margin-top: 2rem;
       }
 
       .boy,
       .women {
         width: 30%;
         margin-top: 3rem;
-      }
-
-      .heart {
-        width: 50%;
-        margin: 4rem 0;
-      }
-
-      .boy {
-        width: 30%;
-      }
-
-      .button {
-        border: 1px solid $image-text-color;
-        border-radius: 10px;
-        padding: 1rem;
-        margin: 3rem 0;
-      }
-
-      li {
-        margin: 1rem 0;
-        display: flex;
-        align-items: center;
       }
     }
   }
@@ -288,67 +244,70 @@ main {
 /* Rainbow color code hearts */
 .tag-hearts {
   margin: 2rem 0;
+  text-align: center;
+  > i { font-style: normal; }
+  > i::before { content: '<3' }
 
-  > span:nth-of-type(n + 12) {
+  > i:nth-of-type(n + 12) {
     display: none;
   }
 
   @media screen and(min-width:768px) {
-    > span:nth-of-type(n + 12) {
+    > i:nth-of-type(n + 12) {
       display: inline-block;
     }
-    > span:nth-of-type(n + 23) {
+    > i:nth-of-type(n + 23) {
       display: none;
     }
   }
 
   @media screen and(min-width:1024px) {
-    > span:nth-of-type(n + 12) {
+    > i:nth-of-type(n + 12) {
       display: inline-block;
     }
   }
 
-  .heart-red {
+  .h-red {
     color: #e50000;
   }
 
-  .heart-orange {
+  .h-orange {
     color: #ff8d00;
   }
 
-  .heart-yellow {
+  .h-yellow {
     color: #ffee00;
   }
 
-  .heart-green {
+  .h-green {
     color: #028121;
   }
 
-  .heart-blue {
+  .h-blue {
     color: #004cff;
   }
 
-  .heart-purple {
+  .h-purple {
     color: #760088;
   }
 
-  .heart-black {
+  .h-black {
     color: #000000;
   }
 
-  .heart-brown {
+  .h-brown {
     color: #613915;
   }
 
-  .heart-aqua {
+  .h-aqua {
     color: #5bcffb;
   }
 
-  .heart-pink {
+  .h-pink {
     color: #ffafc7;
   }
 
-  .heart-white {
+  .h-white {
     color: #ffffff;
   }
 }
