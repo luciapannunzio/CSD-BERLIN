@@ -88,40 +88,32 @@ a {
 .Grid-container header {
   position: sticky;
   top: 0;
-  background-color: #1b39ca;
   z-index: 1;
-}
-.Grid-container header .Header-inner {
+  background-color: #1b39ca;
   display: flex;
   justify-content: space-between;
   align-content: center;
   padding: 2rem;
 }
-.Grid-container header .Header-inner .logo {
-  width: 30%;
-}
-.Grid-container header .Header-inner .languages-buttons {
+.Grid-container header .languages-buttons {
   display: flex;
   align-items: center;
 }
-.Grid-container header .Header-inner .languages-buttons a {
+.Grid-container header .languages-buttons a {
   font-size: 1.5rem;
+}
+.Grid-container header .languages-buttons span {
   margin: 0rem 1rem;
+}
+.Grid-container header .logo {
+  width: 30%;
 }
 @media screen and (min-width: 768px) {
   .Grid-container header {
     grid-column: 1/9;
   }
-  .Grid-container header .Header-inner .logo {
+  .Grid-container header .logo {
     width: 40%;
-  }
-  .Grid-container header .Header-inner .languages-buttons {
-    display: flex;
-    align-items: center;
-  }
-  .Grid-container header .Header-inner .languages-buttons a {
-    font-size: 1.5rem;
-    margin: 0rem 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -132,6 +124,8 @@ a {
 .Grid-container main {
   position: relative;
   top: 30px;
+  /* animated Don't Hate text */
+  /* rainbow to encourage viewer to scroll */
 }
 @media screen and (min-width: 768px) {
   .Grid-container main {
@@ -145,109 +139,89 @@ a {
     top: 4 5px;
   }
 }
-.Grid-container main .welcome-message {
-  height: 70vh;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
-}
-.Grid-container main .welcome-message .hero-text {
-  height: 150px;
+.Grid-container main .hero-text {
+  height: 64vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.Grid-container main .welcome-message .hero-text h1 {
+.Grid-container main .hero-text h1 {
   font-size: 50px;
 }
-.Grid-container main .image-heart {
+.Grid-container main .hero-img-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 32px;
   padding: 2rem;
 }
-.Grid-container main .image-heart #heart {
+.Grid-container main .hero-img-wrapper #hero-img {
   width: 100%;
 }
-.Grid-container main .image-heart h2 {
-  font-size: 28px;
-  margin: 40px;
-}
-.Grid-container main .content {
+.Grid-container main .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 2rem;
 }
-.Grid-container main .content .container {
+.Grid-container main .content-container section {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 3rem 0;
 }
-.Grid-container main .content .container div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-.Grid-container main .content .container div .girl,
-.Grid-container main .content .container div .students {
+.Grid-container main .content-container section .girl,
+.Grid-container main .content-container section .students {
   width: 80%;
   margin-top: 2rem;
 }
-.Grid-container main .content .container div .boy,
-.Grid-container main .content .container div .women {
+.Grid-container main .content-container section .boy,
+.Grid-container main .content-container section .women {
   width: 50%;
   margin-top: 3rem;
 }
-.Grid-container main .content .container div h1 {
+.Grid-container main .content-container section h2 {
   font-size: 40px;
 }
-.Grid-container main .content .container div h2 {
-  font-size: 28px;
-}
-.Grid-container main .content .container div h3 {
-  text-align: center;
-  font-size: 18px;
+.Grid-container main .content-container section h3 {
   margin-bottom: 1rem;
+  text-align: center;
 }
-.Grid-container main .content .container div h4 {
+.Grid-container main .content-container section h4 {
   font-size: 18px;
   margin-top: 3rem;
-  margin-left: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
-.Grid-container main .content .container div p {
-  padding: 1rem;
-  font-size: 18px;
+.Grid-container main .content-container section p {
+  font-size: 1em;
+  text-align: justify;
   line-height: 1.5rem;
 }
-.Grid-container main .content .container div a {
+.Grid-container main .content-container section ul {
+  padding: 1rem;
+  list-style: none;
+}
+.Grid-container main .content-container section ul li {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+.Grid-container main .content-container section ul li .icons {
+  width: 5%;
+  margin-right: 10px;
+}
+.Grid-container main .content-container section a {
   border: 1px solid whitesmoke;
   border-radius: 10px;
   padding: 1rem;
   margin: 3rem 0;
   font-size: 20px;
 }
-.Grid-container main .content .container div a:hover, .Grid-container main .content .container div a:active {
+.Grid-container main .content-container section a:hover, .Grid-container main .content-container section a:active {
   box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.5);
-}
-.Grid-container main .content .container div ul {
-  padding: 1rem;
-  list-style: none;
-}
-.Grid-container main .content .container div ul li {
-  font-size: 0.8rem;
-  margin: 1rem 0;
-  display: flex;
-  align-items: center;
-}
-.Grid-container main .content .container div ul li .icons {
-  width: 5%;
-  margin-right: 10px;
 }
 .Grid-container main .creators {
   display: flex;
