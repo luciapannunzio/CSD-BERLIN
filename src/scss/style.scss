@@ -76,17 +76,6 @@ a {
 .Grid-container {
   background-color: $background-color;
 
-  @media screen and(min-width:768px) {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 1.5rem;
-  }
-
-  @media screen and(min-width:1024px) {
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
-  }
-
   header {
     position: sticky;
     top: 0;
@@ -109,34 +98,13 @@ a {
     .logo {
       width: 30%;
     }
-
-    @media screen and(min-width:768px) {
-      grid-column: 1/9;
-      .logo {
-        width: 40%;
-      }
-    }
-
-    @media screen and(min-width:1024px) {
-      grid-column: 2/12;
-    }
   }
 
   main {
     position: relative;
     top: 30px;
 
-    @media screen and(min-width:768px) {
-      grid-column: 2/8;
-      top: 5px;
-    }
-
-    @media screen and(min-width:1024px) {
-      grid-column: 2/12;
-      top: 4 5px;
-    }
-
-/* animated Don't Hate text */
+    /* animated Don't Hate text */
     .hero-text {
       height: 64vh;
       display: flex;
@@ -148,7 +116,7 @@ a {
         font-size: 50px;
       }
     }
-/* rainbow to encourage viewer to scroll */
+    /* rainbow to encourage viewer to scroll */
     .hero-img-wrapper {
       display: flex;
       flex-direction: column;
@@ -233,7 +201,6 @@ a {
             box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.5);
           }
         }
-
       }
     }
 
@@ -244,8 +211,10 @@ a {
       margin: 4rem 0;
 
       h3 {
+        text-align: center;
         opacity: 0;
         font-size: 1.5rem;
+        padding: 0 2rem;
         transform: translateY(100px);
         transition: opacity 1s ease, transform 1s ease;
       }
@@ -273,8 +242,11 @@ a {
             font-size: 0.8rem;
             margin: 0.2rem;
             a {
-              &:hover { text-decoration: underline; }
-              &:visited, &:active {
+              &:hover {
+                text-decoration: underline;
+              }
+              &:visited,
+              &:active {
                 color: white;
               }
             }
@@ -282,167 +254,72 @@ a {
         }
       }
     }
+}
 
-    @media screen and(min-width:768px) {
-      .welcome-message {
-        .hero-text {
-          height: 300px;
-        }
-      }
+  @media screen and(min-width:768px) {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.5rem;
 
-      .content {
-        .container {
-          margin: 5rem 0;
-
-          div {
-            .boy,
-            .women {
-              width: 45%;
-              margin-top: 3rem;
-            }
-
-            .boy {
-              width: 30%;
-            }
-
-            h2 {
-              font-size: 3rem;
-              margin: 5rem 0;
-            }
-
-            h3 {
-              text-align: none;
-              font-size: 2rem;
-              margin: 0rem 0;
-            }
-
-            h4 {
-              font-size: 1.5rem;
-              margin-top: 4rem;
-            }
-
-            p {
-              padding: 3rem;
-              font-size: 1rem;
-              line-height: 1.5rem;
-            }
-          }
-        }
+    header,
+    main {
+      grid-column: 1/9;
+      .logo {
+        width: 40%;
       }
     }
 
-    @media screen and(min-width:1024px) {
-      .welcome-message {
-        height: 80vh;
+    main > .hero-text {
+      height: 50vh;
+    }
+    #girl,
+    #students
+     {
+      width: 50%
+    }
 
-        .hero-text {
-          height: 200px;
-          font-size: 2.5rem;
-        }
+    #woman {
+      width: 30%;
+    }
 
-        img {
-          width: 20%;
-        }
-      }
-
-      .content {
-        .container {
-          margin: 3rem 0;
-
-          div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-
-            .girl,
-            .students {
-              width: 50%;
-              margin-top: 2rem;
-            }
-            .boy,
-            .women {
-              width: 30%;
-              margin-top: 3rem;
-            }
-
-            .heart {
-              width: 50%;
-              margin: 4rem 0;
-            }
-
-            .boy {
-              width: 30%;
-            }
-
-            h1 {
-              font-size: 42px;
-            }
-
-            h2 {
-              font-size: 36px;
-            }
-
-            h3 {
-              text-align: center;
-              font-size: 20px;
-            }
-
-            h4 {
-              font-size: 20px;
-              margin-top: 10rem;
-              margin-bottom: 3rem;
-            }
-
-            p {
-              padding: 0.5rem;
-              font-size: 18px;
-            }
-
-            a {
-              border: 1px solid $image-text-color;
-              border-radius: 10px;
-              padding: 1rem;
-              margin: 3rem 0;
-            }
-
-            ul {
-              padding: 1rem;
-              list-style: none;
-
-              li {
-                font-size: 18px;
-                margin: 1rem 0;
-                display: flex;
-                align-items: center;
-                // This doesn't seem to target
-                // - It does :) -Joel
-                .icons {
-                  width: 2%;
-                  margin-right: 10px;
-                }
-              }
-            }
-          }
-        }
-      }
+    #boy{
+      width: 25%;
     }
   }
+
+  @media screen and(min-width:1024px) {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    header,
+    main {
+      grid-column: 2/12;
+    }
+  }
+
 }
 
 /* Rainbow color code hearts */
 .tag-hearts {
-  > span:nth-of-type(n+12) { display: none; }
+  > span:nth-of-type(n + 12) {
+    display: none;
+  }
 
   @media screen and(min-width:768px) {
-    > span:nth-of-type(n+12) { display: inline-block; }
-    > span:nth-of-type(n+18) { display: none; }
+    > span:nth-of-type(n + 12) {
+      display: inline-block;
+    }
+    > span:nth-of-type(n + 18) {
+      display: none;
+    }
   }
 
   @media screen and(min-width:1024px) {
-    > span:nth-of-type(n+12) { display: inline-block; }
-    > span:nth-of-type(n+18) { display: inline-block; }
+    > span:nth-of-type(n + 12) {
+      display: inline-block;
+    }
+    > span:nth-of-type(n + 18) {
+      display: inline-block;
+    }
   }
 
   .heart-red {
@@ -485,6 +362,6 @@ a {
   }
 
   .heart-white {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
