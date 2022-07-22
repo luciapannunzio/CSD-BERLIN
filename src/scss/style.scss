@@ -54,58 +54,43 @@ ul { margin: 1.5rem; padding: 0; list-style-type: none; }
   min-height: 100vh;
   overflow: hidden;
   pointer-events: none;
+  background-position: center;
+  background-size: 10vw;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @keyframes brainbow-splosion-bg {
-    0% {
-      opacity: 1;
+  i {
+    animation: rota 1s infinite;
+    @keyframes rota {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
-    80% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
+    @keyframes fade {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
     }
   }
 
-  svg {
-    position: relative;
-    right: 0vw;
-    left: 0vw;
-    top: 0vh;
+  &.intro {
+    animation: brainbow-splosion 2.2s forwards;
+
+    i { animation: fade 0.3s forwards; }
 
     @keyframes brainbow-splosion {
       0% {
         opacity: 1;
-        width: 5vw;
-        left: 0vw;
-        top: 0vh;
+        background-size: 10vw;
       }
       80% {
         opacity: 1;
-        width: 100vw;
-        left: 0vw;
-        top: 0vh;
+        background-size: 280vw;
       }
       100% {
-        opacity: 0.5;
-        width: 500vw;
-        left: -200vw;
-        top: -100vw;
+        opacity: 0;
+        background-size: 600vw;
       }
-    }
-  }
-
-  // Trigger intro animations class is inserted by JavaScript
-  &.intro {
-    animation: brainbow-splosion-bg 2.2s;
-    animation-fill-mode: forwards;
-
-    svg {
-      animation: brainbow-splosion 2.2s;
-      animation-fill-mode: forwards;
     }
   }
 }
