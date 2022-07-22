@@ -230,16 +230,11 @@ main {
 footer {
   display: flex;
   flex-direction: column;
-  margin: 0 3rem 2rem 2rem;
-  font-size: 10px;
+  margin: 3rem;
+  font-size: 0.8rem;
+  text-align: center;
 
-  a,
-  a:active,
-  a:visited {
-    color: white;
-  }
-
-  a:hover {
+  a:hover, a:active {
     text-decoration: underline;
   }
 
@@ -263,6 +258,7 @@ footer {
     }
   }
 }
+
 /* Rainbow color code hearts */
 .tag-hearts {
   margin: 2rem 0;
