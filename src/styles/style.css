@@ -380,7 +380,7 @@ main .container .students {
 }
 main .container .boy,
 main .container .women {
-  width: 50%;
+  width: 30%;
   margin-top: 3rem;
 }
 main .container li {
@@ -410,24 +410,9 @@ main .creators div a:hover {
   text-decoration: underline;
 }
 @media screen and (min-width: 768px) {
-  main .container .boy,
-main .container .women {
-    width: 45%;
-    margin-top: 3rem;
-  }
-  main .container .boy {
-    width: 30%;
-  }
-}
-@media screen and (min-width: 1024px) {
   main .container .girl,
 main .container .students {
     width: 50%;
-  }
-  main .container .boy,
-main .container .women {
-    width: 30%;
-    margin-top: 3rem;
   }
 }
 
