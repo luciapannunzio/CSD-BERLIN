@@ -225,12 +225,12 @@ body {
   color: white;
 }
 
+/* General layout styles */
 a {
   text-decoration: none;
   color: whitesmoke;
 }
 
-/* General layout styles */
 p {
   margin: 2rem 1.5rem 0 1.5rem;
   font-size: 1rem;
@@ -380,7 +380,7 @@ main .container .students {
 }
 main .container .boy,
 main .container .women {
-  width: 30%;
+  width: 50%;
   margin-top: 3rem;
 }
 main .container li {
@@ -410,10 +410,58 @@ main .creators div a:hover {
   text-decoration: underline;
 }
 @media screen and (min-width: 768px) {
+  main .container .boy,
+main .container .women {
+    width: 45%;
+    margin-top: 3rem;
+  }
+  main .container .boy {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
   main .container .girl,
 main .container .students {
     width: 50%;
   }
+  main .container .boy,
+main .container .women {
+    width: 30%;
+    margin-top: 3rem;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem 2rem 2rem;
+  font-size: 10px;
+}
+footer a,
+footer a:active,
+footer a:visited {
+  color: white;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-right ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-right ul img {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%) sepia(14%) saturate(7500%) hue-rotate(197deg) brightness(114%) contrast(117%);
+}
+footer .footer-right ul .instagram {
+  border: 1px solid rgba(255, 255, 255, 0);
+  margin: 0 1em;
 }
 
 /* Rainbow color code hearts */

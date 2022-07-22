@@ -242,6 +242,42 @@ main {
   }
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem 2rem 2rem;
+  font-size: 10px;
+
+  a,
+  a:active,
+  a:visited {
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 30px;
+        height: 30px;
+        filter: invert(100%) sepia(14%) saturate(7500%) hue-rotate(197deg) brightness(114%) contrast(117%);
+      }
+      .instagram {
+        border: 1px solid #ffffff00;
+        margin: 0 1em;
+      }
+    }
+  }
+}
 /* Rainbow color code hearts */
 .tag-hearts {
   margin: 2rem 0;
